@@ -4,12 +4,7 @@ Manager:
     Game:
         name:'game'
         player:'attack_1.png'
-        canvas:
-            Color:
-                rgba:0, 139, 139, 1
-            Rectangle:
-                size:self.size
-                pos:self.pos
+
 <MenuButton@Button>:
     font_size:'50sp'
 
@@ -40,4 +35,10 @@ Manager:
 <Player>:
     source:'attack_1.png'
 <Game>:
-    Player:
+    FloatLayout:
+        Player:
+            id:player
+            size_hint:None,None
+            size:root.height/2,root.height/2
+            x:root.width/20
+            y:root.height/2
