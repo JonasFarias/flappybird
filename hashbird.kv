@@ -1,0 +1,29 @@
+Manager:
+    Menu:
+        name:'menu'
+    Game:
+        name:'game'
+<MenuButton@Button>:
+    font_size:'50sp'
+
+<Menu>:
+    BoxLayout:
+        canvas:
+            Color:
+                rgba:0, 139, 139, 1
+            Rectangle:
+                size:self.size
+                pos:self.pos
+        orientation:'vertical'
+        padding:'200dp', '50dp'
+        spacing:'400dp'
+        Widget:
+        BoxLayout:
+            pos_hint: {"x": 0.01, "y": 0.01}
+            MenuButton:
+                pos_hint: {"x": 0.01, "y": 0.01}
+                text:'Start'
+                on_release:app.root.current = 'game'
+            MenuButton:
+                text:'Exit'
+                pos_hint: {"x": 0.01, "y": 0.01}
